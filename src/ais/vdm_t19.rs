@@ -69,27 +69,6 @@ pub(crate) fn handle(
             }
         },
         timestamp_seconds: pick_u64(bv, 133, 6) as u8, //same as code 18 until here
-        // TODO: VesselStaticData could be created from below info, but info not reliable (https://gpsd.gitlab.io/gpsd/AIVDM.html#_type_19_extended_class_b_cs_position_report)
-        // name: {
-        //     let raw = pick_string(bv, 143, 20);
-        //     match raw.as_str() {
-        //         "" => None,
-        //         _ => Some(raw),
-        //     }
-        // },
-        // ship_type: { ShipType::new(pick_u64(bv, 263, 8) as u8) },
-        // cargo_type: { CargoType::new(pick_u64(bv, 263, 8) as u8) },
-        // // dimension_to_bow: { Some(pick_u64(bv, 271, 9) as u16) },
-        // dimension_to_stern: { Some(pick_u64(bv, 280, 9) as u16) },
-        // dimension_to_port: { Some(pick_u64(bv, 289, 6) as u16) },
-        // dimension_to_starboard: { Some(pick_u64(bv, 264, 6) as u16) },
-        // position_fix_type: {
-        //     let raw = pick_u64(bv, 301, 4) as u8;
-        //     match raw {
-        //         0 => None,
-        //         _ => Some(PositionFixType::new(raw)),
-        //     }
-        // },
         class_b_unit_flag: { None },
         class_b_display: { None },
         class_b_dsc: { None },
